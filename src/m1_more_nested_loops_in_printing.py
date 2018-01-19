@@ -9,9 +9,9 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the other functions to test them. """
-    run_test_triangle_right_justified()
+    # run_test_triangle_right_justified()
     # run_test_triangle_upside_down()
-    # run_test_vee()
+    run_test_vee()
     # run_test_numbers_constant_forward()
     # run_test_numbers_constant_backwards()
     # run_test_numbers_increasing_forward()
@@ -55,7 +55,7 @@ def triangle_right_justified(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # HINT: Do the following problem FIRST, then convert x's to spaces:
@@ -79,6 +79,7 @@ def triangle_right_justified(r):
             print(j+1, end='')
             # print(j)
         print()
+
 
 def run_test_triangle_upside_down():
     """ Tests the    triangle_upside_down    function. """
@@ -114,7 +115,7 @@ def triangle_upside_down(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -122,6 +123,11 @@ def triangle_upside_down(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        print(k*' ', end='')
+        for j in range(r-k):
+            print(j+1, end='')
+        print()
 
 
 def run_test_vee():
@@ -165,7 +171,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -173,7 +179,14 @@ def vee(r):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for k in range(r):
+        print(k * ' ', end='')
+        for j in range(r-k):
+            print(j+1, end='')
+        print('-', end='')
+        for n in range(r-k):
+            print(r-n-k, end='')
+        print()
 
 def run_test_numbers_constant_forward():
     """ Tests the    numbers_constant_forward    function. """
