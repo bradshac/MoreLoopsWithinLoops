@@ -13,8 +13,8 @@ def main():
     # run_test_triangle_upside_down()
     # run_test_vee()
     # run_test_numbers_constant_forward()
-    run_test_numbers_constant_backwards()
-    # run_test_numbers_increasing_forward()
+    # run_test_numbers_constant_backwards()
+    run_test_numbers_increasing_forward()
 
 
 def run_test_triangle_right_justified():
@@ -350,6 +350,12 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
+    for k in range(r):
+        for j in range(maxnum):
+            for a in range(j+1):
+                print(j+1, end='')
+            print(' ', end='')
+        print()
 
 
 # ----------------------------------------------------------------------
